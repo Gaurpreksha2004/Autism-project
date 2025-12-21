@@ -1900,7 +1900,7 @@ function GameScreen({
 
 // --- Main App Component (Router & State Management) ---
 // Using React.FC to explicitly define the component type and help with JSX namespace issue
-export default function App(): React.FC {
+export default function App() {
   const [openCategory, setOpenCategory] = useState<Category | null>(null);
   const [page, setPage] = useState<"home" | "content" | "game">("home");
   const [activeGame, setActiveGame] = useState<ActiveGame>(null);
