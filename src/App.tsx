@@ -696,7 +696,7 @@ function AppContent({ points, setPoints, openCategory, setOpenCategory, setPage,
           <div className="bg-white rounded-3xl p-8 shadow-2xl w-full max-w-2xl border-4 border-indigo-400">
             <h2 className="text-2xl font-black mb-6 text-indigo-900">{openCategory.title}</h2>
             <ul className="space-y-4 max-h-[50vh] overflow-y-auto">
-              {openCategory.subtopics.map((s, i) => (
+             {openCategory.subtopics.map((s: Subtopic, i: number) => (
                 <li key={i} className="p-4 bg-slate-50 rounded-xl border border-indigo-100 flex flex-col gap-3 text-left">
                   <strong className="text-lg text-indigo-800">{s.title}</strong>
                   <button onClick={() => { setOpenCategory(null); setActiveGame({ category: openCategory, subtopic: s }); setPage("game"); }} 
